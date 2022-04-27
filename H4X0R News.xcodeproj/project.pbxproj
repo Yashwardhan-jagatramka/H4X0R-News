@@ -11,6 +11,10 @@
 		DD425D422819352C007AE691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD425D412819352C007AE691 /* ContentView.swift */; };
 		DD425D442819352D007AE691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD425D432819352D007AE691 /* Assets.xcassets */; };
 		DD425D472819352D007AE691 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD425D462819352D007AE691 /* Preview Assets.xcassets */; };
+		DD425D4F28193A19007AE691 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD425D4E28193A19007AE691 /* NetworkManager.swift */; };
+		DD425D5128193D45007AE691 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD425D5028193D45007AE691 /* PostData.swift */; };
+		DD425D55281945F1007AE691 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD425D54281945F1007AE691 /* DetailView.swift */; };
+		DD425D5828194D05007AE691 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD425D5728194D05007AE691 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		DD425D412819352C007AE691 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD425D432819352D007AE691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD425D462819352D007AE691 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD425D4E28193A19007AE691 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DD425D5028193D45007AE691 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		DD425D54281945F1007AE691 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DD425D5728194D05007AE691 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		DD425D5928194FCF007AE691 /* H4X0R News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4X0R News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		DD425D3E2819352C007AE691 /* H4X0R News */ = {
 			isa = PBXGroup;
 			children = (
+				DD425D5928194FCF007AE691 /* H4X0R News.entitlements */,
 				DD425D3F2819352C007AE691 /* H4X0R_NewsApp.swift */,
-				DD425D412819352C007AE691 /* ContentView.swift */,
+				DD425D53281945BF007AE691 /* Views */,
+				DD425D4D281939E1007AE691 /* Models */,
 				DD425D432819352D007AE691 /* Assets.xcassets */,
 				DD425D452819352D007AE691 /* Preview Content */,
 			);
@@ -65,6 +76,25 @@
 				DD425D462819352D007AE691 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DD425D4D281939E1007AE691 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD425D4E28193A19007AE691 /* NetworkManager.swift */,
+				DD425D5028193D45007AE691 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD425D53281945BF007AE691 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD425D412819352C007AE691 /* ContentView.swift */,
+				DD425D54281945F1007AE691 /* DetailView.swift */,
+				DD425D5728194D05007AE691 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD425D4F28193A19007AE691 /* NetworkManager.swift in Sources */,
+				DD425D5128193D45007AE691 /* PostData.swift in Sources */,
 				DD425D422819352C007AE691 /* ContentView.swift in Sources */,
+				DD425D5828194D05007AE691 /* WebView.swift in Sources */,
+				DD425D55281945F1007AE691 /* DetailView.swift in Sources */,
 				DD425D402819352C007AE691 /* H4X0R_NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,9 +300,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
+				DEVELOPMENT_TEAM = J7RAPW964T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -283,6 +319,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yashwardhan.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -294,9 +331,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
+				DEVELOPMENT_TEAM = J7RAPW964T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -311,6 +350,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yashwardhan.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
